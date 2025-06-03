@@ -6,7 +6,7 @@ import GeneralContext from "./GeneralContext"
 import axios from 'axios';
 const WatchList = () => {
  useEffect(() => {
-  axios.get('http://localhost:8080/orders')
+  axios.get('https://zerodhaclone-5boi.onrender.com/orders')
     .then((res) => {
    
       setallorders(res.data); 

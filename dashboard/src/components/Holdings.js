@@ -6,7 +6,7 @@ import { VerticalChart } from "./VerticalChart";
 
 const Holdings = () => {
   useEffect(() => {
-  axios.get('http://localhost:8080/holding')
+  axios.get('https://zerodhaclone-5boi.onrender.com/holding')
     .then((res) => {
       setallHoldings(res.data); // 👈 ye line missing hai
     })

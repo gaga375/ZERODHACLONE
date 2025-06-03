@@ -5,7 +5,7 @@ import axios from 'axios';
 
 const Positions = () => {
   useEffect(() => {
-  axios.get('http://localhost:8080/position')
+  axios.get('https://zerodhaclone-5boi.onrender.com/position')
     .then((res) => {
       setallPosition(res.data); 
     })

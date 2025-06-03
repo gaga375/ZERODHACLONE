@@ -6,7 +6,7 @@ import axios from 'axios';
 const Orders = () => {
 
    useEffect(() => {
-  axios.get('http://localhost:8080/newOrder')
+  axios.get('https://zerodhaclone-5boi.onrender.com/newOrder')
     .then((res) => {
       setallorders(res.data); 
       console.log(res.data)

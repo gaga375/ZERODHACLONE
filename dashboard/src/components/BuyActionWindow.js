@@ -14,7 +14,7 @@ const BuyActionWindow = ({ uid }) => {
 
 const BuyClickAction = () => {
   if( stockPrice &&  stockQuantity ){
-     axios.post('http://localhost:8080/newOrder', {
+     axios.post('https://zerodhaclone-5boi.onrender.com/newOrder', {
       name: uid,
       qty: stockQuantity,
       price: stockPrice,
