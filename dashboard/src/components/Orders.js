@@ -1,6 +1,5 @@
 import React from "react";
 import {useState,useEffect} from "react";
-import { Link } from "react-router-dom";
 import axios from 'axios';
 
 const Orders = () => {
@@ -9,7 +8,6 @@ const Orders = () => {
   axios.get('https://zerodhaclone-5boi.onrender.com/newOrder')
     .then((res) => {
       setallorders(res.data); 
-      console.log(res.data)
     })
     .catch((err) => {
       console.error("Axios Error:", err.message);

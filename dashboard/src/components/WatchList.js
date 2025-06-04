@@ -30,12 +30,9 @@ const [allorders,setallorders] = useState([])
       </div>
 
       <ul className="list">
-        {allorders.map((stock,index)=>{
-          return(<>
-<Watchlistitem stock={stock} index={index} />
-</>
-          )
-        })}
+        {allorders.map((stock,index)=>( 
+          <Watchlistitem stock={stock} index={index} />
+        ))}
       </ul>
     <PaiChart data={allorders}/>
     </div>
