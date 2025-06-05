@@ -18,12 +18,21 @@ const cookieParser = require('cookie-parser')
 
    mongoose.connect(url)
 
+const allowedOrigins = [
+  'http://localhost:3000',
+  'https://zerodhaclone-dashboard-9z8a.onrender.com'
+];
+
 app.use(cors({
-  origin: "http://localhost:3000",
-  methods: ["GET", "POST", "PUT", "DELETE"],
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   credentials: true
 }));
-
 
 app.get( '/position',async(req, res)=>{
   let data = await positions.find({});
